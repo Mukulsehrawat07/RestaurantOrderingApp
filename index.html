@@ -3,56 +3,68 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+        <!-- css file -->
         <link rel="stylesheet" href="index.css">
         <title>Mukul's Diner</title>
     </head>
     <body>
-        <header class="hero-header">
-            <img class="burger-img" src="/images/burger.jpg" alt="main heading picture of burger with fries">
-            <div class="hero-text">
-                <h1 class="diner-name">Mukul's Diner</h1>
-                <p class="welcome-line">The Best pizzas and burgers in town</p>
-            </div>
+      <div class="main-container">
+        <!-- header -->
+        <header>
+          <h1>Mukul's Diner</h1>
+          <p>The best burgers and pizzas in town</p>
         </header>
-        <section class="menu-section">
-        <!-- Item 1: Pizza -->
-            <div class="menu-item">
-            <img class="item-graphic" src="/images/pizza.jpg" alt="Pizza item">
-            <div class="item-details">
-                <h2 class="item-title">Pizza</h2>
-                <p class="item-description">Delicious cheesy pizza with fresh toppings.</p>
-                <span class="item-price">$12.99</span>
+        <!-- main -->
+        <main>
+          <section>
+            <!-- to render the menu -->
+            <div class="menu" id="menu"></div>
+          </section>
+          <!-- to render order -->
+          <section>
+            <div class="order" id="order">
+              <h2>Your order</h2>
+              <div id="order-details"></div>
+              <button class="complete-order" id="complete-order">complete Order</button>
             </div>
-            <button class="add-btn">+</button>
-            </div>
-            <hr class="divider">
+          </section>
+          <!-- thank you div -->
+           <div class="thanks" id="thanks"></div>
+        </main>
+      </div>
+          <!-- card details modal -->
+             <div class="card-details-modal" id="card-details-modal">
+                 <h2>Enter card details</h2>
+                 <form action="" id="card-form">
+                     <input
+                         type="text"  
+                         placeholder="Enter your name"
+                         id="userName"
+                         name="userName"
+                         required>
+                      <input 
+                          type="text"
+                          name="cardNumber"
+                          placeholder="Enter card number(16 digits)"
+                          id="card-number"
+                          required
+                          pattern="[0-9]{16}">
+                      <input
+                          type="text"
+                          name="cardCvv"
+                          placeholder="Enter card number(3 digits)"
+                          id="card-cvv"
+                          required
+                          pattern="[0-9]{3}">
+                      <button id="pay-btn" class="pay-btn" type="submit">Pay</button>
+                 </form>
+             </div>
+            
 
-            <!-- Item 2: Hamburger -->
-            <div class="menu-item">
-            <img class="item-graphic" src="/images/hamburger.jpg" alt="Hamburger item">
-            <div class="item-details">
-                <h2 class="item-title">Hamburger</h2>
-                <p class="item-description">Juicy grilled hamburger with lettuce and tomato.</p>
-                <span class="item-price">$9.99</span>
-            </div>
-            <button class="add-btn">+</button>
-            </div>
-            <hr class="divider">
-
-            <!-- Item 3: Beer -->
-            <div class="menu-item">
-            <img class="item-graphic" src="/images/beer.jpg" alt="Beer item">
-            <div class="item-details">
-                <h2 class="item-title">Beer</h2>
-                <p class="item-description">Refreshing cold beer served in a chilled glass.</p>
-                <span class="item-price">$4.99</span>
-            </div>
-            <button class="add-btn">+</button>
-            </div>
-            <hr class="divider"> 
-        </section>
-
-	<script src="index.js" type="module"></script>
+          <script src="index.js" type="module"></script>
     </body>
 </html>
