@@ -2,6 +2,10 @@
 
 A modern, interactive web-based ordering system for **Mukul's Diner** that allows customers to browse menu items, add/remove items from their cart, and complete their order with payment details.
 
+## 🌐 Live Demo
+
+**[Visit the live application](https://restaurantorderingappmk.netlify.app/)**
+
 ## 📸 Preview
 
 ### 1. Pre-Checkout State
